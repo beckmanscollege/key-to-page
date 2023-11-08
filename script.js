@@ -33,26 +33,22 @@ document.addEventListener('keydown', function (event) {
 	}
 })
 
-// Define variables for timer values
+/* TIMER LOGIC */
+
 let minutes = 0
 let seconds = 0
 let milliseconds = 0
-
-// Define the timer interval variable
 let interval
 
-// Function to start the timer
 function startTimer() {
 	clearInterval(interval) // Clear any existing intervals
 	interval = setInterval(updateTimer, 10) // Update the timer every 10 milliseconds
 }
 
-// Function to pause the timer
 function pauseTimer() {
 	clearInterval(interval)
 }
 
-// Function to reset the timer
 function resetTimer() {
 	clearInterval(interval)
 	minutes = 0
@@ -61,7 +57,6 @@ function resetTimer() {
 	document.getElementById('timerDisplay').innerHTML = '00:00:00'
 }
 
-// Function to update the timer
 function updateTimer() {
 	milliseconds += 10
 	if (milliseconds >= 1000) {
@@ -73,12 +68,10 @@ function updateTimer() {
 		}
 	}
 
-	// Format the timer values into strings with leading zeros
 	let minutesStr = minutes < 10 ? '0' + minutes : minutes
 	let secondsStr = seconds < 10 ? '0' + seconds : seconds
 	let millisecondsStr = milliseconds < 100 ? '0' + Math.floor(milliseconds / 10) : Math.floor(milliseconds / 10)
 
-	// Display the timer values
 	document.getElementById('timerDisplay').innerHTML = minutesStr + ':' + secondsStr + ':' + millisecondsStr
 }
 
