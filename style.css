@@ -1,0 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+.pages {
+	width: 100%;
+	height: 100%;
+}
+
+.pages {
+	position: fixed;
+}
+
+.pages.small {
+	z-index: 10;
+	width: 20%;
+	height: 20%;
+	margin-left: 40%;
+	margin-top: 40%;
+}
+
+.page:not(.show) {
+	display: none;
+}
+
+.page,
+.page > * {
+	width: 100%;
+	height: 100%;
+}
+
