@@ -26,6 +26,10 @@ body,
 	display: none;
 }
 
+.page {
+	background-color: white;
+}
+
 .page,
 .page > * {
 	width: 100%;
