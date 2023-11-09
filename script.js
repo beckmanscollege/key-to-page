@@ -33,7 +33,6 @@ document.addEventListener('keydown', function (event) {
 		const iframe = el.querySelector('iframe')
 		if (iframe) {
 			iframe.focus()
-			alert('')
 		} else {
 			window.focus()
 		}
