@@ -30,6 +30,13 @@ document.addEventListener('keydown', function (event) {
 				media.play()
 			}
 		})
+		const iframe = el.querySelector('iframe')
+		if (iframe) {
+			iframe.focus()
+			alert('')
+		} else {
+			window.focus()
+		}
 	}
 })
 

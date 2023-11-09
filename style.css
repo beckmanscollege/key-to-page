@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	border: 0;
 	box-sizing: border-box;
 }
 
@@ -11,7 +12,8 @@ body,
 }
 
 body {
-	pointer-events: none;
+	/* pointer-events: none; */
+	text-align: center;
 }
 
 .pages {
@@ -20,10 +22,12 @@ body {
 
 .pages.small {
 	z-index: 10;
+	position: relative;
+	display: inline-block;
 	width: 20%;
 	height: 20%;
-	margin-left: 40%;
-	margin-top: 40%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .page:not(.show) {
